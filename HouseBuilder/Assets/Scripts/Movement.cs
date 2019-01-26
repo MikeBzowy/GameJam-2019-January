@@ -9,6 +9,8 @@ public class Movement : MonoBehaviour {
 	public Rigidbody player_physics;	
 	public BoxCollider player_collider;
 
+	Animator animation_manager;
+
 	// Use this for initialization
 	void Start () {
 		player_physics = this.GetComponent<Rigidbody> ();
@@ -21,5 +23,12 @@ public class Movement : MonoBehaviour {
 
 		float vertical_input = Input.GetAxis ("Vertical");
 		this.transform.position += new Vector3 (0, vertical_input * vertical_movement_speed * Time.deltaTime, 0);
+
+		if ((Input.GetAxis ("Grab")) > 0.5) {
+			Debug.Log("Grabing" + Input.GetAxis("Grab"));
+
+
+		}
+
 	}
 }
