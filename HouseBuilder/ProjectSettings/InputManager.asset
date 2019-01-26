@@ -17,7 +17,7 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 0
-    invert: 0
+    invert: 1
     type: 2
     axis: 0
     joyNum: 1
@@ -36,7 +36,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1
+    joyNum: 2
   - serializedVersion: 3
     m_Name: P3_Horizontal
     descriptiveName: 
@@ -52,7 +52,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1
+    joyNum: 3
   - serializedVersion: 3
     m_Name: P4_Horizontal
     descriptiveName: 
@@ -68,7 +68,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: P1_Vertical
     descriptiveName: 
@@ -100,7 +100,7 @@ InputManager:
     invert: 1
     type: 2
     axis: 1
-    joyNum: 1
+    joyNum: 2
   - serializedVersion: 3
     m_Name: P3_Vertical
     descriptiveName: 
@@ -116,7 +116,7 @@ InputManager:
     invert: 1
     type: 2
     axis: 1
-    joyNum: 1
+    joyNum: 3
   - serializedVersion: 3
     m_Name: P4_Vertical
     descriptiveName: 
@@ -132,7 +132,7 @@ InputManager:
     invert: 1
     type: 2
     axis: 1
-    joyNum: 1
+    joyNum: 4
   - serializedVersion: 3
     m_Name: P1_Grab
     descriptiveName: 
@@ -164,7 +164,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
-    joyNum: 1
+    joyNum: 2
   - serializedVersion: 3
     m_Name: P3_Grab
     descriptiveName: 
@@ -180,7 +180,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
-    joyNum: 1
+    joyNum: 3
   - serializedVersion: 3
     m_Name: P4_Grab
     descriptiveName: 
@@ -196,4 +196,4 @@ InputManager:
     invert: 0
     type: 2
     axis: 9
-    joyNum: 1
+    joyNum: 4
