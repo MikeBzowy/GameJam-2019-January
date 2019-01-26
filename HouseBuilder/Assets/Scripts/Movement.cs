@@ -11,6 +11,8 @@ public class Movement : MonoBehaviour {
 	bool canGrab = false;
 	bool isGrabing = false;
 
+	public int player = 1;
+
 	// Use this for initialization
 	void Start () {
 		player_physics = this.GetComponent<Rigidbody> ();
@@ -18,17 +20,17 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float horizontal_input = Input.GetAxis ("P1_Horizontal");
+		float horizontal_input = Input.GetAxis ("P" + player + "_Horizontal");
 		this.transform.position += new Vector3 (horizontal_input * horizontal_movement_speed * Time.deltaTime, 0, 0);
 
-		float vertical_input = Input.GetAxis ("P1_Vertical");
+		float vertical_input = Input.GetAxis ("P" + player + "_Vertical");
 		this.transform.position += new Vector3 (0, vertical_input * vertical_movement_speed * Time.deltaTime, 0);
 
-		if (Input.GetAxis ("P1_Grab") > 0.5 && !canGrab)
+		if (Input.GetAxis ("P" + player + "_Grab") > 0.5 && !canGrab)
 		{
 			canGrab = true;
 		}
-		if (Input.GetAxis ("P1_Grab") < 0.5 && isGrabing) 
+		if (Input.GetAxis ("P" + player + "_Grab") < 0.5 && isGrabing) 
 		{
 			GetComponent<HingeJoint> ().connectedBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;
 			canGrab = false;
@@ -38,6 +40,9 @@ public class Movement : MonoBehaviour {
 	}
 	void OnTriggerStay(Collider other)
 	{
+		if (other.gameObject.layer != LayerMask.NameToLayer ("Furniture")) {
+			return;
+		}
 		if (canGrab == true && !isGrabing)
 		{
 			canGrab = false;
