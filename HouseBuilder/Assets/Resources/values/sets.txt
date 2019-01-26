@@ -2,3 +2,4 @@ Chalet
 Wood
 Industrial
 space
+Bathroom
