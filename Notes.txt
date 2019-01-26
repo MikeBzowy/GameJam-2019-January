@@ -4,5 +4,10 @@ Look into these docs for making a cursor
 - https://answers.unity.com/questions/364766/creating-a-custom-cursor.html
 - https://answers.unity.com/questions/543894/how-can-i-control-cursor-with-joystick.html
 - https://www.youtube.com/watch?v=wdoxJNR_7T0
+- https://answers.unity.com/questions/9408/set-cursor-position.html
+- https://forum.unity.com/threads/move-mouse-cursor-with-xbox-360-controller-ingame.156171/
 
 - https://forum.unity.com/threads/how-to-create-a-mouse-like-cursor-to-be-controlled-by-the-keyboard-or-a-joystick.299656/ (most promising)
+- https://answers.unity.com/questions/318766/use-gamepad-right-analog-stick-instead-of-mouse-to.html
+
+https://forum.unity.com/threads/how-often-do-you-use-delegates-and-interfaces-in-your-games.445190/#post-2881323
