@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour {
 	public Rigidbody player_physics;	
 	public BoxCollider player_collider;
 	bool canGrab = false;
+	bool isGrabing = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,18 +24,30 @@ public class Movement : MonoBehaviour {
 		float vertical_input = Input.GetAxis ("P1_Vertical");
 		this.transform.position += new Vector3 (0, vertical_input * vertical_movement_speed * Time.deltaTime, 0);
 
-		if (Input.GetAxis ("P1_Grab") > 0.5)
-			{
-				Debug.Log("Grabing " + Input.GetAxis("Grab"));
-				canGrab = true;
-			}
-
+		if (Input.GetAxis ("P1_Grab") > 0.5 && !canGrab)
+		{
+			canGrab = true;
+		}
+		if (Input.GetAxis ("P1_Grab") < 0.5 && isGrabing) 
+		{
+			GetComponent<HingeJoint> ().connectedBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;
+			canGrab = false;
+			isGrabing = false;
+			Destroy(GetComponent<HingeJoint>());
+		}
 	}
-	void OnTriggerEnter(Collider other)
+	void OnTriggerStay(Collider other)
 	{
-		if (other.tag == "" && canGrab == true)
+		if (canGrab == true && !isGrabing)
 		{
 			canGrab = false;
+			isGrabing = true;
+			Debug.Log ("Grabing");
+			this.gameObject.AddComponent<HingeJoint>();
+			this.gameObject.GetComponent<HingeJoint>().connectedBody=other.GetComponent<Rigidbody>();
+			this.gameObject.GetComponent<HingeJoint>().axis=new Vector3(0,0,1);
+			other.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
+
 		}
 	}
 }
