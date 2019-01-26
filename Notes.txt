@@ -1,4 +1,8 @@
 Look into these docs for making a cursor
 
-- docs.unity3d.com/ScriptReference/Cursor.SetCursor.html
-- https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseOver.html
+- https://www.indiedb.com/games/paralycid/tutorials/paralycid-implementing-a-virtual-cursor-with-unity
+- https://answers.unity.com/questions/364766/creating-a-custom-cursor.html
+- https://answers.unity.com/questions/543894/how-can-i-control-cursor-with-joystick.html
+- https://www.youtube.com/watch?v=wdoxJNR_7T0
+
+- https://forum.unity.com/threads/how-to-create-a-mouse-like-cursor-to-be-controlled-by-the-keyboard-or-a-joystick.299656/ (most promising)
