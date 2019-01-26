@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4577420956022834}
   - component: {fileID: 65903204068493864}
+  - component: {fileID: 114718572392291502}
   m_Layer: 0
   m_Name: House_Plant_1-col
   m_TagString: Untagged
@@ -192,3 +193,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8869442, y: 1.8169186, z: 1.8402567}
   m_Center: {x: 0.00000053895695, y: 0.82858926, z: -0.0700232}
+--- !u!114 &114718572392291502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1624179648506796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f07e2fa2108734b92b508c6f367901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myColor: "green\r"
+  myType: "Accessory\r"
+  mySet: "Junk\r"
+  points: 25
+  mass: 0.25
