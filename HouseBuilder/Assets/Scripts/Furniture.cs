@@ -7,4 +7,5 @@ public class Furniture : MonoBehaviour {
 	public string myType;
 	public string mySet;
 	public float points;
+	public float mass = 1;
 }

@@ -85,5 +85,8 @@ public class EditorGUIEnumPopup : Editor
 
 		EditorGUILayout.LabelField ("Points:");
 		test.points = EditorGUILayout.FloatField (test.points);
+
+		EditorGUILayout.LabelField ("Mass:");
+		test.mass = EditorGUILayout.FloatField (test.mass);
 	}
 }
