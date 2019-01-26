@@ -9,55 +9,54 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1989350837715774}
+  m_RootGameObject: {fileID: 1228110606875718}
   m_IsPrefabParent: 1
---- !u!1 &1989350837715774
+--- !u!1 &1228110606875718
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4899474937337784}
-  - component: {fileID: 33469967403653756}
-  - component: {fileID: 23671020804163178}
-  - component: {fileID: 65247668308777722}
-  - component: {fileID: 65432276704084144}
-  - component: {fileID: 114829270591189318}
+  - component: {fileID: 4270569205474496}
+  - component: {fileID: 33996920609239282}
+  - component: {fileID: 23898412597680464}
+  - component: {fileID: 65887014224183100}
+  - component: {fileID: 114375427928115078}
   m_Layer: 0
-  m_Name: WB-toilet-col
+  m_Name: MK-Refrigerator_2-col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4899474937337784
+--- !u!4 &4270569205474496
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989350837715774}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 2.5086823, y: -0.004383564, z: 3.5358791}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1228110606875718}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: 5.8048606, y: -0.6130414, z: -0.19901562}
+  m_LocalScale: {x: 107.52245, y: 107.52248, z: 107.52248}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!23 &23671020804163178
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23898412597680464
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989350837715774}
+  m_GameObject: {fileID: 1228110606875718}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
-  m_LightProbeUsage: 0
+  m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8d5992bfb677ff34b9daf6196d37e28d, type: 2}
+  - {fileID: 2100000, guid: 137fab4b64e68e942836a84095cfdb29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,50 +75,38 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33469967403653756
+--- !u!33 &33996920609239282
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989350837715774}
-  m_Mesh: {fileID: 4300000, guid: 71e66e68001e66a4095257ae1c720a77, type: 3}
---- !u!65 &65247668308777722
+  m_GameObject: {fileID: 1228110606875718}
+  m_Mesh: {fileID: 4300000, guid: fd86dd3bb815de54fb8f5d719048bc69, type: 3}
+--- !u!65 &65887014224183100
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989350837715774}
+  m_GameObject: {fileID: 1228110606875718}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.49231493, y: 0.575953, z: 0.8749212}
-  m_Center: {x: -0.000000029802322, y: 0.26815772, z: 0.0024179816}
---- !u!65 &65432276704084144
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989350837715774}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.49231493, y: 0.42586756, z: 0.3120989}
-  m_Center: {x: -0.000000029802322, y: 0.7934587, z: -0.29775387}
---- !u!114 &114829270591189318
+  m_Size: {x: 0.020000007, y: 0.016380962, z: 0.044311754}
+  m_Center: {x: -4.656613e-10, y: 0.0003263568, z: 0.022125721}
+--- !u!114 &114375427928115078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989350837715774}
+  m_GameObject: {fileID: 1228110606875718}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f07e2fa2108734b92b508c6f367901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myColor: "white\r"
-  myType: "chair\r"
-  mySet: "Bathroom\r"
-  points: 5
-  mass: 1
+  myColor: "Metalic\r"
+  myType: "Fridge\r"
+  mySet: "Kitchen\r"
+  points: 10
+  mass: 4
