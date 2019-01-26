@@ -48,10 +48,28 @@ public class Movement : MonoBehaviour {
 			canGrab = false;
 			isGrabing = true;
 			Debug.Log ("Grabing");
+
+			bool found = false;
+			GameObject current = other.gameObject;
+			while (!found && current.transform.parent != null) {
+				Rigidbody rb = current.GetComponent<Rigidbody> ();
+				Debug.Log ("checking: " + current.name);
+				if (rb != null) {
+					Debug.Log ("Found rb: " + current.name);
+					rb.constraints = RigidbodyConstraints.None;
+					found = true;
+				}
+				current = current.transform.parent.gameObject;
+			}
+
+			if (!found)
+				Debug.Log ("couldn't find rb");
+
 			this.gameObject.AddComponent<HingeJoint>();
-			this.gameObject.GetComponent<HingeJoint>().connectedBody=other.GetComponent<Rigidbody>();
+			this.gameObject.GetComponent<HingeJoint>().connectedBody=current.GetComponent<Rigidbody>();
 			this.gameObject.GetComponent<HingeJoint>().axis=new Vector3(0,0,1);
-			other.GetComponent<Rigidbody> ().constraints = RigidbodyConstraints.None;
+
+				
 
 		}
 	}
