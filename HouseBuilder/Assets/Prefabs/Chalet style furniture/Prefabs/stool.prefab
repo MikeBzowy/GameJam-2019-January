@@ -10,6 +10,10 @@ GameObject:
   - component: {fileID: 475956}
   - component: {fileID: 3375956}
   - component: {fileID: 2375956}
+  - component: {fileID: 65447279897629288}
+  - component: {fileID: 65497593649321018}
+  - component: {fileID: 65188323142348582}
+  - component: {fileID: 65534959449070668}
   m_Layer: 0
   m_Name: stool
   m_TagString: Untagged
@@ -80,3 +84,51 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 175956}
   m_IsPrefabParent: 1
+--- !u!65 &65188323142348582
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5555873, y: 0.51769376, z: 1.896905}
+  m_Center: {x: 0.6618228, y: 0.19957078, z: 0.0030903816}
+--- !u!65 &65447279897629288
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3528123, y: 1.1729972, z: 0.12861252}
+  m_Center: {x: -0.2932441, y: 0.5865396, z: -0.9200382}
+--- !u!65 &65497593649321018
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12392533, y: 1.2328951, z: 1.4739301}
+  m_Center: {x: 0.854364, y: 0.6164886, z: 0.3058244}
+--- !u!65 &65534959449070668
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7329559, y: 1.1219957, z: 0.40393257}
+  m_Center: {x: -0.101864815, y: 0.56103885, z: -0.6350291}

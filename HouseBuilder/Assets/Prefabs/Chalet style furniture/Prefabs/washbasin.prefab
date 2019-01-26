@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 418740}
   - component: {fileID: 3318740}
   - component: {fileID: 2318740}
+  - component: {fileID: 64270377096856868}
   m_Layer: 0
   m_Name: washbasin
   m_TagString: Untagged
@@ -27,8 +28,9 @@ GameObject:
   - component: {fileID: 418742}
   - component: {fileID: 3318742}
   - component: {fileID: 2318742}
+  - component: {fileID: 64001742762988276}
   m_Layer: 0
-  m_Name: shells
+  m_Name: shells-col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,6 +46,7 @@ GameObject:
   - component: {fileID: 418744}
   - component: {fileID: 3318744}
   - component: {fileID: 2318744}
+  - component: {fileID: 64269174614540586}
   m_Layer: 0
   m_Name: cranes
   m_TagString: Untagged
@@ -115,7 +118,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.58691406, y: -5.4375286, z: 1.0566596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418744}
@@ -252,3 +255,45 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 118746}
   m_IsPrefabParent: 1
+--- !u!64 &64001742762988276
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300004, guid: 3626a93cf041fa34f9ce3abda0f81527, type: 3}
+--- !u!64 &64269174614540586
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 3626a93cf041fa34f9ce3abda0f81527, type: 3}
+--- !u!64 &64270377096856868
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 3626a93cf041fa34f9ce3abda0f81527, type: 3}

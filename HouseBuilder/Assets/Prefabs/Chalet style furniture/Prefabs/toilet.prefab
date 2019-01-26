@@ -10,6 +10,8 @@ GameObject:
   - component: {fileID: 457134}
   - component: {fileID: 3357134}
   - component: {fileID: 2357134}
+  - component: {fileID: 65221739767999014}
+  - component: {fileID: 65284392425644954}
   m_Layer: 0
   m_Name: toilet
   m_TagString: Untagged
@@ -24,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157134}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.4608264, y: -5.28125, z: -0.44419983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,3 +82,27 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 157134}
   m_IsPrefabParent: 1
+--- !u!65 &65221739767999014
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49231493, y: 0.575953, z: 0.8749212}
+  m_Center: {x: -0.000000029802322, y: 0.26815772, z: 0.0024179816}
+--- !u!65 &65284392425644954
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49231493, y: 0.42586756, z: 0.3120989}
+  m_Center: {x: -0.000000029802322, y: 0.7934587, z: -0.29775387}
