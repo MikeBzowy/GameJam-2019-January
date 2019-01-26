@@ -1,0 +1,4 @@
+Look into these docs for making a cursor
+
+- docs.unity3d.com/ScriptReference/Cursor.SetCursor.html
+- https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnMouseOver.html
