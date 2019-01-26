@@ -9,46 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1502924100472122}
+  m_RootGameObject: {fileID: 1663416633917916}
   m_IsPrefabParent: 1
---- !u!1 &1502924100472122
+--- !u!1 &1663416633917916
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4474730224210182}
-  - component: {fileID: 33619904254034872}
-  - component: {fileID: 23994260171717818}
-  - component: {fileID: 65163487512013784}
-  - component: {fileID: 65584922995425842}
+  - component: {fileID: 4720811197330080}
+  - component: {fileID: 33336824861921410}
+  - component: {fileID: 23603040256999318}
+  - component: {fileID: 65934953708868310}
+  - component: {fileID: 65792699775360492}
+  - component: {fileID: 114337111312732712}
   m_Layer: 0
-  m_Name: Toilet_1-col
+  m_Name: MB-Toilet_1-col
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4474730224210182
+--- !u!4 &4720811197330080
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1502924100472122}
+  m_GameObject: {fileID: 1663416633917916}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 8.714844, y: 1.2062017, z: -30.084503}
+  m_LocalPosition: {x: 2.6876373, y: -0.45500612, z: 3.374258}
   m_LocalScale: {x: 49.33066, y: 49.330677, z: 49.330677}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23994260171717818
+--- !u!23 &23603040256999318
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1502924100472122}
+  m_GameObject: {fileID: 1663416633917916}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -75,34 +76,50 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33619904254034872
+--- !u!33 &33336824861921410
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1502924100472122}
+  m_GameObject: {fileID: 1663416633917916}
   m_Mesh: {fileID: 4300000, guid: 8b2187eee69412246b555d50d7e41e78, type: 3}
---- !u!65 &65163487512013784
+--- !u!65 &65792699775360492
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1502924100472122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.021492638, y: 0.03336141, z: 0.025131611}
-  m_Center: {x: 0, y: 0.003909471, z: 0.012565811}
---- !u!65 &65584922995425842
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1502924100472122}
+  m_GameObject: {fileID: 1663416633917916}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.021492638, y: 0.00913809, z: 0.042241767}
   m_Center: {x: 0, y: 0.016021129, z: 0.02112088}
+--- !u!65 &65934953708868310
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663416633917916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021492638, y: 0.03336141, z: 0.025131611}
+  m_Center: {x: 0, y: 0.003909471, z: 0.012565811}
+--- !u!114 &114337111312732712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663416633917916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f07e2fa2108734b92b508c6f367901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myColor: "Metalic\r"
+  myType: "chair\r"
+  mySet: "Bathroom\r"
+  points: 5
+  mass: 1
