@@ -8,10 +8,14 @@ public class Movement : MonoBehaviour {
 	public float vertical_movement_speed = 3.0f;
 	public Rigidbody player_physics;	
 	public BoxCollider player_collider;
+	public float breakForce = 10f;
 	bool canGrab = false;
 	bool isGrabing = false;
 
 	public int player = 1;
+
+	HingeJoint HJ;
+	Rigidbody connected;
 
 	// Use this for initialization
 	void Start () {
@@ -32,11 +36,21 @@ public class Movement : MonoBehaviour {
 		}
 		if (Input.GetAxis ("P" + player + "_Grab") < 0.5 && isGrabing) 
 		{
-			GetComponent<HingeJoint> ().connectedBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;
+			
+			if (HJ != null)
+			{
+				HJ.connectedBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;
+				connected = null;
+				Destroy(HJ);
+			}
 			canGrab = false;
 			isGrabing = false;
-			Destroy(GetComponent<HingeJoint>());
 		}
+
+		if (isGrabing && HJ == null) {
+			connected.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;;
+		}
+
 	}
 	void OnTriggerStay(Collider other)
 	{
@@ -50,24 +64,28 @@ public class Movement : MonoBehaviour {
 			Debug.Log ("Grabing");
 
 			bool found = false;
-			GameObject current = other.gameObject;
-			while (!found && current.transform.parent != null) {
-				Rigidbody rb = current.GetComponent<Rigidbody> ();
+			Transform current = other.gameObject.transform;
+			while (!found && current != null) {
+				Rigidbody rb = current.gameObject.GetComponent<Rigidbody> ();
 				Debug.Log ("checking: " + current.name);
 				if (rb != null) {
 					Debug.Log ("Found rb: " + current.name);
 					rb.constraints = RigidbodyConstraints.None;
 					found = true;
+				} else {
+					current = current.transform.parent;
 				}
-				current = current.transform.parent.gameObject;
 			}
 
 			if (!found)
 				Debug.Log ("couldn't find rb");
-
-			this.gameObject.AddComponent<HingeJoint>();
-			this.gameObject.GetComponent<HingeJoint>().connectedBody=current.GetComponent<Rigidbody>();
-			this.gameObject.GetComponent<HingeJoint>().axis=new Vector3(0,0,1);
+			else {
+				HJ = this.gameObject.AddComponent<HingeJoint> ();
+				HJ.connectedBody = current.gameObject.GetComponent<Rigidbody> ();
+				connected = HJ.connectedBody;
+				HJ.axis = new Vector3 (0, 0, 1);
+				HJ.breakForce = 1000f;
+			}
 
 				
 
