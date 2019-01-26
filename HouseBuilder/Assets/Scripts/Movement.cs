@@ -13,7 +13,6 @@ public class Movement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player_physics = this.GetComponent<Rigidbody> ();
-		Animator anim = this.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
