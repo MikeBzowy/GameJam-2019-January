@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33305833271230228}
   - component: {fileID: 23800904572877334}
   - component: {fileID: 65883301838502900}
+  - component: {fileID: 114001677264086590}
   m_Layer: 0
   m_Name: rack-col
   m_TagString: Untagged
@@ -95,3 +96,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5958111, y: 0.5252265, z: 0.38020426}
   m_Center: {x: 0, y: 0.26299357, z: 0}
+--- !u!114 &114001677264086590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1961560676461432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f07e2fa2108734b92b508c6f367901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myColor: "brown\r"
+  myType: "Shelf\r"
+  mySet: "Chalet\r"
+  points: 5
+  mass: 2

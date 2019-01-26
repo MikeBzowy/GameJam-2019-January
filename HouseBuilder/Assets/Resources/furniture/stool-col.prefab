@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 65537028796983600}
   - component: {fileID: 65325560450100334}
   - component: {fileID: 65339414246472402}
+  - component: {fileID: 114806828104337120}
   m_Layer: 0
   m_Name: stool-col
   m_TagString: Untagged
@@ -134,3 +135,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12392533, y: 1.2328951, z: 1.4739301}
   m_Center: {x: 0.854364, y: 0.6164886, z: 0.3058244}
+--- !u!114 &114806828104337120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1435719471873340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f07e2fa2108734b92b508c6f367901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myColor: "brown\r"
+  myType: "chair\r"
+  mySet: "Chalet\r"
+  points: 10
+  mass: 3
