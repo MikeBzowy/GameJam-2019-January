@@ -29,22 +29,22 @@ public class NewGame : MonoBehaviour {
 		p3 = Input.GetAxis ("P3_Grab");
 		p4 = Input.GetAxis ("P4_Grab");
 
-		if ((p1 > 0.5f) && !one){
+		if ((p1 > 0.5f) && one != 1){
 			Debug.Log("P1 in game");
 			one = 1;
 			GameObject.Find("P1_Grey").SendMessage ("Triger");
 		}
-		if ((p2 > 0.5f) && !two){
+		if ((p2 > 0.5f) && two != 1){
 			Debug.Log("P2 in game");
 			two = 1;
 			GameObject.Find("P2_Grey").SendMessage ("Triger");
 		}
-		if ((p3 > 0.5f) && !three){
+		if ((p3 > 0.5f) && three != 1){
 			Debug.Log("P3 in game");
 			three = 1;
 			GameObject.Find("P3_Grey").SendMessage ("Triger");
 		}
-		if ((p4 > 0.5f) && !four){
+		if ((p4 > 0.5f) && four != 1){
 			Debug.Log("P4 in game");
 			four = 1;
 			GameObject.Find("P4_Grey").SendMessage ("Triger");
