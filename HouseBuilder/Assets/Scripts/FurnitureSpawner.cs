@@ -49,7 +49,7 @@ public class FurnitureSpawner : MonoBehaviour {
 	{    
 		GameObject prefab = Instantiate (furniturePrefab, slots[slot].position, slots[slot].rotation);
 		int whichItem = Random.Range (0, walls.Length);
-		GameObject myObj = Instantiate (walls [whichItem], prefab.transform.position, prefab.transform.rotation, prefab.transform) as GameObject;
+		GameObject myObj = Instantiate (walls [whichItem], prefab.transform.position, walls [whichItem].transform.rotation, prefab.transform) as GameObject;
 		inventory [slot] = prefab.GetComponent<Rigidbody>();
 		ChangeLayersRecursively (prefab.transform, "UI");
 		prefab.tag = "wall";
@@ -82,7 +82,7 @@ public class FurnitureSpawner : MonoBehaviour {
 				if (counter < 0) {
 					grabbed = false;
 					for (int i = 0; i < slots.Length; i++) {
-						if (Random.Range (0, 2) == 0) {
+						if (Random.Range (0, 4) > 0) {
 							SpawnRandomFurniture (i);
 						} else {
 							SpawnRandomWalls (i);

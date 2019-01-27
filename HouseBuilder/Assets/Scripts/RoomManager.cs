@@ -152,17 +152,19 @@ public class RoomManager : MonoBehaviour {
 		float maxY = walls[cycle[0]].transform.position.y;
 
 		for (int i = 0; i < cycle.Length; i++) {
-			if (walls [cycle [i]].transform.position.x < minX)
-				minX = walls [cycle [i]].transform.position.x;
+			if (cycle [i] < walls.Count) {
+				if (walls [cycle [i]].transform.position.x < minX)
+					minX = walls [cycle [i]].transform.position.x;
 
-			if (walls [cycle [i]].transform.position.x > maxX)
-				maxX = walls [cycle [i]].transform.position.x;
+				if (walls [cycle [i]].transform.position.x > maxX)
+					maxX = walls [cycle [i]].transform.position.x;
 
-			if (walls [cycle [i]].transform.position.y < minY)
-				minY = walls [cycle [i]].transform.position.y;
+				if (walls [cycle [i]].transform.position.y < minY)
+					minY = walls [cycle [i]].transform.position.y;
 
-			if (walls [cycle [i]].transform.position.y > maxY)
-				maxY = walls [cycle [i]].transform.position.y;
+				if (walls [cycle [i]].transform.position.y > maxY)
+					maxY = walls [cycle [i]].transform.position.y;
+			}
 		}
 
 		Room r = new Room ();

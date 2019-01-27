@@ -13,6 +13,8 @@ public class EndGame : MonoBehaviour {
 	public ScoreDisplayer[] displayers;
 	public PlayerScore[] scores;
 
+	public RoomManager[] rms;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -24,6 +26,10 @@ public class EndGame : MonoBehaviour {
 	}
 
 	public void End () {
+		for(int i = 0; i < rms.Length; i++){
+			rms [i].EndGame ();
+		}
+
 
 		for(int i = 0; i < displayers.Length; i++){
 			displayers [i].showScore (scores [i]);
