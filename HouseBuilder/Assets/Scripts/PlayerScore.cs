@@ -10,6 +10,7 @@ public class PlayerScore : MonoBehaviour {
 	public float safety = 0;
 	public float luxury = 0;
 	public float interior_design = 0;
+	public float totalScore = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -80,5 +81,7 @@ public class PlayerScore : MonoBehaviour {
 		foreach (RoomManager.Room r in rm.rooms) {
 			atmosphere += Mathf.Log10((r.maxX - r.minX) * (r.maxY - r.minY)) * 50; // calculate indoor living space
 		}
+
+		totalScore = atmosphere +safety +luxury + interior_design;
 	}
 }
