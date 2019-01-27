@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4890982286483164}
   - component: {fileID: 54779510479893794}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: FurniturePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,3 +4,4 @@ bed
 lamp
 Accessory
 Shelf
+wall

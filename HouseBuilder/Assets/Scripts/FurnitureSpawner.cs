@@ -13,7 +13,7 @@ public class FurnitureSpawner : MonoBehaviour {
 
 	Rigidbody[] inventory;
 
-	float MAX_DELAY = 2;
+	float MAX_DELAY = 3;
 	float counter = 0;
 
 	bool grabbed = true;
@@ -35,6 +35,7 @@ public class FurnitureSpawner : MonoBehaviour {
 		int whichItem = Random.Range (0, furniture.Length);
 		GameObject myObj = Instantiate (furniture [whichItem], prefab.transform.position, prefab.transform.rotation, prefab.transform) as GameObject;
 		inventory [slot] = prefab.GetComponent<Rigidbody>();
+		ChangeLayersRecursively (prefab.transform, "UI");
 
 	}
 
@@ -44,6 +45,7 @@ public class FurnitureSpawner : MonoBehaviour {
 		int whichItem = Random.Range (0, walls.Length);
 		GameObject myObj = Instantiate (walls [whichItem], prefab.transform.position, prefab.transform.rotation, prefab.transform) as GameObject;
 		inventory [slot] = prefab.GetComponent<Rigidbody>();
+		ChangeLayersRecursively (prefab.transform, "UI");
 	}
 
 	void Update() {
@@ -51,6 +53,7 @@ public class FurnitureSpawner : MonoBehaviour {
 			foreach (Rigidbody r in inventory) {
 				if (r.constraints != RigidbodyConstraints.FreezeAll) {
 					grabbed = true;
+					ChangeLayersRecursively (r.transform, "Furniture");
 				}
 			}
 
@@ -77,6 +80,15 @@ public class FurnitureSpawner : MonoBehaviour {
 					counter = MAX_DELAY;
 				}
 			}
+		}
+	}
+
+	public static void ChangeLayersRecursively(Transform trans, string name)
+	{
+		trans.gameObject.layer = LayerMask.NameToLayer(name);
+		foreach(Transform child in trans)
+		{            
+			ChangeLayersRecursively(child, name);
 		}
 	}
 }

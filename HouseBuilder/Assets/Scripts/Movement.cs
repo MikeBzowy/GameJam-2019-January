@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour {
 	}
 	void OnTriggerStay(Collider other)
 	{
-		if (other.gameObject.layer != LayerMask.NameToLayer ("Furniture")) {
+		if (other.gameObject.layer != LayerMask.NameToLayer ("Furniture") && other.gameObject.layer != LayerMask.NameToLayer ("UI")) {
 			return;
 		}
 		if (canGrab == true && !isGrabing)
