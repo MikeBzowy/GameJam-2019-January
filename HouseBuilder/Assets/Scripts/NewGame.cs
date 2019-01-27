@@ -10,10 +10,10 @@ public class NewGame : MonoBehaviour {
 	float p3;
 	float p4;
 
-	bool one = false;
-	bool two = false;
-	bool three = false;
-	bool four = false;
+	int one = 0;
+	int two = 0;
+	int three = 0;
+	int four = 0;
 
 
 	// Use this for initialization
@@ -31,26 +31,26 @@ public class NewGame : MonoBehaviour {
 
 		if ((p1 > 0.5f) && !one){
 			Debug.Log("P1 in game");
-			one = true;
+			one = 1;
 			GameObject.Find("P1_Grey").SendMessage ("Triger");
 		}
 		if ((p2 > 0.5f) && !two){
 			Debug.Log("P2 in game");
-			two = true;
+			two = 1;
 			GameObject.Find("P2_Grey").SendMessage ("Triger");
 		}
 		if ((p3 > 0.5f) && !three){
 			Debug.Log("P3 in game");
-			three = true;
+			three = 1;
 			GameObject.Find("P3_Grey").SendMessage ("Triger");
 		}
 		if ((p4 > 0.5f) && !four){
 			Debug.Log("P4 in game");
-			four = true;
+			four = 1;
 			GameObject.Find("P4_Grey").SendMessage ("Triger");
 		}
 	
-		if (one || two || three || four){
+		if ((one + two + three + four) >= 3){
 			SceneManager.LoadScene("main");
 		}
 
