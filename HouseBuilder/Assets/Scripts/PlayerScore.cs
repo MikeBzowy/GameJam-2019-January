@@ -24,6 +24,8 @@ public class PlayerScore : MonoBehaviour {
 	public void ScoreGame() {
 		foreach (GameObject g in fs.placedFurniture) {
 			luxury += g.transform.GetChild(0).GetComponent<Furniture> ().points; // points for furniture placed
+
+			safety += (int)(Vector3.Angle (g.transform.up, Vector3.down) / 18f)*2;
 		}
 
 		foreach (List<GameObject> rooms in rm.roomContents) {
