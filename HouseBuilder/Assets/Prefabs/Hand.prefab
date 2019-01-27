@@ -68,7 +68,7 @@ Transform:
   m_GameObject: {fileID: 1216854085167700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.3, y: 0.13, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.01}
   m_Children:
   - {fileID: 4068517378563414}
   m_Father: {fileID: 0}
@@ -167,4 +167,5 @@ MonoBehaviour:
   vertical_movement_speed: 3
   player_physics: {fileID: 0}
   player_collider: {fileID: 0}
+  breakForce: 10
   player: 1

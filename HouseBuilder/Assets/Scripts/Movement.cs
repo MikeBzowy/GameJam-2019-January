@@ -14,6 +14,8 @@ public class Movement : MonoBehaviour {
 
 	public int player = 1;
 
+	Vector3 rotation;
+
 	HingeJoint HJ;
 	Rigidbody connected;
 
@@ -37,7 +39,7 @@ public class Movement : MonoBehaviour {
 		}
 		if (Input.GetAxis ("P" + player + "_Grab") < 0.5 && isGrabing) 
 		{
-			
+
 			if (HJ != null)
 			{
 				HJ.connectedBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;
@@ -49,6 +51,10 @@ public class Movement : MonoBehaviour {
 		}
 
 		if (isGrabing && HJ == null) {
+			isGrabing = false;
+			Quaternion q = connected.transform.rotation;
+			q.eulerAngles = new Vector3(rotation.x, rotation.y, connected.transform.rotation.eulerAngles.z);
+			//connected.angularVelocity = new Vector3 (0, 0, connected.angularVelocity.z);
 			connected.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionZ;;
 		}
 
@@ -79,8 +85,13 @@ public class Movement : MonoBehaviour {
 
 			if (!found)
 				Debug.Log ("couldn't find rb");
-			else {
+			else 
+			{
 				HJ = this.gameObject.AddComponent<HingeJoint> ();
+
+				rotation = transform.rotation.eulerAngles;
+				Debug.Log (rotation);
+
 				HJ.connectedBody = current.gameObject.GetComponent<Rigidbody> ();
 				connected = HJ.connectedBody;
 				HJ.axis = new Vector3 (0, 0, 1);
