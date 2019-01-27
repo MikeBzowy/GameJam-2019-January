@@ -18,6 +18,9 @@ public class FurnitureSpawner : MonoBehaviour {
 
 	bool grabbed = true;
 
+	public List<GameObject> placedWalls;
+	public List<GameObject> placedFurniture;
+
 	void Start()
 	{
 		//Important note: place your prefabs folder(or levels or whatever) 
@@ -27,6 +30,9 @@ public class FurnitureSpawner : MonoBehaviour {
 		walls = Resources.LoadAll<GameObject>("walls");
 
 		inventory = new Rigidbody[slots.Length];
+
+		placedWalls = new List<GameObject> ();
+		placedFurniture = new List<GameObject> ();
 	}
 
 	void SpawnRandomFurniture(int slot) 
@@ -46,6 +52,7 @@ public class FurnitureSpawner : MonoBehaviour {
 		GameObject myObj = Instantiate (walls [whichItem], prefab.transform.position, prefab.transform.rotation, prefab.transform) as GameObject;
 		inventory [slot] = prefab.GetComponent<Rigidbody>();
 		ChangeLayersRecursively (prefab.transform, "UI");
+		prefab.tag = "wall";
 	}
 
 	void Update() {
@@ -54,6 +61,10 @@ public class FurnitureSpawner : MonoBehaviour {
 				if (r.constraints != RigidbodyConstraints.FreezeAll) {
 					grabbed = true;
 					ChangeLayersRecursively (r.transform, "Furniture");
+					if (r.gameObject.tag == "wall")
+						placedWalls.Add (r.gameObject.transform.GetChild(0).gameObject);
+					else
+						placedFurniture.Add (r.gameObject);
 				}
 			}
 
