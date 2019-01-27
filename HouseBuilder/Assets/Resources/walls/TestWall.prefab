@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114822004170200726}
   m_Layer: 0
   m_Name: TestWall
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0f07e2fa2108734b92b508c6f367901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myColor: "white\r"
-  myType: "wall\r"
-  mySet: "space\r"
+  myColor: "Warm\r"
+  myType: "Table\r"
+  mySet: "Chic\r"
   points: 0
   mass: 1

@@ -6,6 +6,7 @@ using System.Linq;
 
 public class RoomManager : MonoBehaviour {
 	public FurnitureSpawner fs;
+	public PlayerScore ps;
 
 	List<GameObject> walls;
 	public GameObject ground;
@@ -19,8 +20,8 @@ public class RoomManager : MonoBehaviour {
 		public float minY;
 		public float maxY;
 	}
-	List<Room> rooms;
-	List<List<GameObject>> roomContents;
+	public List<Room> rooms;
+	public List<List<GameObject>> roomContents;
 
 	List<Vector3[]> wallBounds;
 	List<List<Vector2>> polygons;
@@ -31,8 +32,11 @@ public class RoomManager : MonoBehaviour {
 		rooms = new List<Room> ();
 		roomContents = new List<List<GameObject>> ();
 	}
-	
-	// Update is called once per frame
+
+	public void EndGame(){
+		BuildGraph ();	
+	}
+
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.G)) {
 			Debug.Log ("Pressed G");
@@ -112,6 +116,8 @@ public class RoomManager : MonoBehaviour {
 			}
 			Debug.Log (s);
 		}
+
+		ps.ScoreGame ();
 	}
 
 	void FillRooms(){
