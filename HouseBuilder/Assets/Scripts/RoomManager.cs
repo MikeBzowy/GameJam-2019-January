@@ -263,6 +263,8 @@ public class RoomManager : MonoBehaviour {
 	static T[,] CreateRectangularArray<T>(IList<T[]> arrays)
 	{
 		// TODO: Validation and special-casing for arrays.Count == 0
+		if (arrays.Count == 0)
+			return new T[0, 2];
 		int minorLength = arrays[0].Length;
 		T[,] ret = new T[arrays.Count, minorLength];
 		for (int i = 0; i < arrays.Count; i++)

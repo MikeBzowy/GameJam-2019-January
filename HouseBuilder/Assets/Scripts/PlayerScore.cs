@@ -78,7 +78,7 @@ public class PlayerScore : MonoBehaviour {
 		}
 
 		foreach (RoomManager.Room r in rm.rooms) {
-			atmosphere += (r.maxX - r.minX) * (r.maxY - r.minY); // calculate indoor living space
+			atmosphere += Mathf.Log10((r.maxX - r.minX) * (r.maxY - r.minY)) * 50; // calculate indoor living space
 		}
 	}
 }
