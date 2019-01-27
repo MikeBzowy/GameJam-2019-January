@@ -1,7 +1,9 @@
-table
-chair
-bed
-lamp
+Table
+Chair
+Bed
+Lamp
 Accessory
 Shelf
-wall
+Wall
+Bathroom
+Kitchen
