@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour {
 	HingeJoint HJ;
 	Rigidbody connected;
 
+
 	// Use this for initialization
 	void Start () {
 		player_physics = this.GetComponent<Rigidbody> ();
@@ -61,7 +62,6 @@ public class Movement : MonoBehaviour {
 		{
 			canGrab = false;
 			isGrabing = true;
-			Debug.Log ("Grabing");
 
 			bool found = false;
 			Transform current = other.gameObject.transform;
@@ -85,6 +85,8 @@ public class Movement : MonoBehaviour {
 				connected = HJ.connectedBody;
 				HJ.axis = new Vector3 (0, 0, 1);
 				HJ.breakForce = 1000f;
+
+
 			}
 
 				
