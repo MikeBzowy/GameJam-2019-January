@@ -2610,7 +2610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 2135800113}
-  TimeLeft: 120
+  TimeLeft: 60
 --- !u!114 &1438825839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3024,7 +3024,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1594812227}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.627, y: 0, z: 0}
+  m_LocalPosition: {x: -2.71, y: 0, z: 0}
   m_LocalScale: {x: 1.68, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 1121280721}
@@ -3519,7 +3519,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1876307578}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.937, y: 0, z: 0}
+  m_LocalPosition: {x: -0.84, y: 0, z: 0}
   m_LocalScale: {x: 1.6799998, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 1121280721}
