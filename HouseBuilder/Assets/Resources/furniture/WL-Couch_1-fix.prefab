@@ -9,46 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1210076401476414}
+  m_RootGameObject: {fileID: 1163855652480662}
   m_IsPrefabParent: 1
---- !u!1 &1210076401476414
+--- !u!1 &1163855652480662
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4348329504530882}
-  - component: {fileID: 33398252780392926}
-  - component: {fileID: 23253214758260714}
-  - component: {fileID: 135793955465724978}
-  - component: {fileID: 114618465340537352}
+  - component: {fileID: 4617519662132898}
+  - component: {fileID: 33906445767182732}
+  - component: {fileID: 23455722164680106}
+  - component: {fileID: 65386793975601622}
+  - component: {fileID: 114287678863406364}
   m_Layer: 0
-  m_Name: WJ-Ball_1-col
+  m_Name: WL-Couch_1-fix
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4348329504530882
+--- !u!4 &4617519662132898
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1210076401476414}
+  m_GameObject: {fileID: 1163855652480662}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 2.0362701, y: -0.021503925, z: 3.877676}
-  m_LocalScale: {x: 40.516605, y: 40.516605, z: 40.516605}
+  m_LocalPosition: {x: -3.8517888, y: -10.282336, z: 29.439453}
+  m_LocalScale: {x: 70, y: 70, z: 70}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23253214758260714
+--- !u!23 &23455722164680106
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1210076401476414}
+  m_GameObject: {fileID: 1163855652480662}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: bc571f4d55bfe8946a7f706439a53a1f, type: 2}
+  - {fileID: 2100000, guid: 1282aac839cf37b45ba2f1f26e5aa091, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,38 +75,38 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33398252780392926
+--- !u!33 &33906445767182732
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1210076401476414}
-  m_Mesh: {fileID: 4300000, guid: 77ac052cdde4bce4b9c521de187308df, type: 3}
---- !u!114 &114618465340537352
+  m_GameObject: {fileID: 1163855652480662}
+  m_Mesh: {fileID: 4300000, guid: ac59d41bde6224c4089a0cfbf902d645, type: 3}
+--- !u!65 &65386793975601622
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163855652480662}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.043753065, y: 0.015238227, z: 0.013766928}
+  m_Center: {x: 0, y: 0.0002089055, z: 0.005371811}
+--- !u!114 &114287678863406364
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1210076401476414}
+  m_GameObject: {fileID: 1163855652480662}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0f07e2fa2108734b92b508c6f367901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myColor: "white\r"
-  myType: "Accessory\r"
-  mySet: "Junk\r"
-  points: 5
-  mass: 0.5
---- !u!135 &135793955465724978
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1210076401476414}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.009999998
-  m_Center: {x: 0, y: 0, z: 0}
+  myType: "chair\r"
+  mySet: "Chalet\r"
+  points: 10
+  mass: 2.5
