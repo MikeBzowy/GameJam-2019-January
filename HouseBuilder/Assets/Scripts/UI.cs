@@ -5,20 +5,16 @@ using UnityEngine;
 
 public class UI : MonoBehaviour {
 
-<<<<<<< HEAD
 	public Text timerText;
 	public float TimeLeft = 120;
 	bool gameStart = false;
 
-=======
->>>>>>> 9cbab1fd3c64d76bc1999002cc136634d5f6d6d8
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-<<<<<<< HEAD
 	void Update () 
 	{
 		TimeLeft -= Time.deltaTime;
@@ -40,9 +36,8 @@ public class UI : MonoBehaviour {
 	{
 		//do stuff here
 		Debug.Log("Time Over!!!!");
-=======
+
+
 	void Update () {
-		
->>>>>>> 9cbab1fd3c64d76bc1999002cc136634d5f6d6d8
 	}
 }
