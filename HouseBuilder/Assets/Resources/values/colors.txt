@@ -1,8 +1,4 @@
-red
-blue
-green
-yellow
-white
-white
-black
-brown
+Warm
+Cool
+Earthy
+Contemporary
